@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package grpc;
+
+option go_package = "homework-8/internal/app/grpc_server/pb;pb";
+
+service GRPCService {
+    rpc CreateUser (CreateUserRequest) returns (CreateUserResponse) {}
+    rpc UpdateUser (UpdateUserRequest) returns (UpdateUserRespone) {}
+    rpc ListUsers (ListUsersRequest) returns (ListUsersResponse) {}
+    rpc GetUser (GetUserRequest) returns (GetUserResponse) {}
+}
+
+message User {
+    int64 id = 1;
+    string name = 2;
+    int64 age = 3;
+}
+
+message CreateUserRequest {
+    User user = 1;
+}
+
+message CreateUserResponse {
+    int64 id = 1;
+}
+
+message UpdateUserRequest {
+    User user = 1;
+}
+
+message UpdateUserRespone {
+    bool ok = 1;
+}
+
+message ListUsersRequest {
+}
+
+message ListUsersResponse {
+    repeated User users = 1;
+}
+
+message GetUserRequest {
+    int64 id = 1;
+}
+
+message GetUserResponse {
+    User user = 1;
+}

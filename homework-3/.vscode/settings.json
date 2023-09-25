@@ -1,0 +1,24 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "demo",
+            "database": "demo",
+            "username": "hinata34",
+            "password": "hinata34"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "ozon",
+            "database": "OZON",
+            "username": "hinata34",
+            "password": "hinata34"
+        }
+    ]
+}

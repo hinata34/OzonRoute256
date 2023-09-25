@@ -1,0 +1,8 @@
+package address
+
+type Address struct {
+	ID          int64  `db:"id"`
+	HouseNumber int64  `db:"house_number"`
+	StreetName  string `db:"street_name"`
+	UserID      int64  `db:"user_id"`
+}

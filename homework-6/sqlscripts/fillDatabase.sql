@@ -1,0 +1,2 @@
+INSERT INTO users(id, name, age) SELECT id, md5(random()::text), random()*(100 - 1) + 1 FROM generate_series(1, 10000) id;
+INSERT INTO addresses(id, house_number, street_name, user_id) SELECT id, random()*(100 - 1) + 1, md5(random()::text), random()*(10000 - 1) + 1 FROM generate_series(1, 10000) id;
